@@ -29,6 +29,7 @@ class Song {
         }
         int get_duration() { return duration.get_total_seconds(); }
         void set_duration(int duration) { this->duration = SongDuration(0, duration); }
+        std::string get_formatted_duration() {return duration.get_formatted();}
         static int get_total_songs() { return count_songs; }
 
         std::string get_artist() { return artist; }

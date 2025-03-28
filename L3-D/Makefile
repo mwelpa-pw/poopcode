@@ -4,7 +4,7 @@ LDFLAGS=-fsanitize=address,leak
 
 .PHONY: all clean
 
-main.o: main.cpp SongDuration.hpp Song.hpp
+main.o: main.cpp SongDuration.hpp Song.hpp Playlist.hpp
 	${CXX} ${CXXFLAGS} main.cpp -o main.o
 
 

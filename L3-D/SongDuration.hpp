@@ -10,7 +10,7 @@ class SongDuration {
     unsigned int seconds;
   public:
     SongDuration(unsigned int g_minutes=0 , unsigned int g_seconds=0) {
-      while (g_seconds > 60) {
+      while (g_seconds > 59) {
         g_seconds -= 60;
         g_minutes += 1;
         }
