@@ -81,7 +81,7 @@ int main() {
 
     std::cout << "\n*************** PART 4 (Smart Pointers) ***************\n\n";
 
-    /*
+
     struct Dummy {
         char id;
         Dummy(char id) : id(id) {
@@ -93,7 +93,7 @@ int main() {
     };
 
     // [TODO 1]: Zdefiniuj dwa puste wektory przechowujÄ…ce shared_ptr do Dummy
-    // v1
+
     // v2
     {
         // [TODO 1]: Zdefiniuj 3 zmienne przechowujÄ…ce shared_ptr do Dummy z identyfikatorami A, B i C
@@ -118,7 +118,7 @@ int main() {
     // v3
 
     // [TODO 2]: Dodaj do v3 dwa unique_ptr z identyfikatorami D i E
-    */
+
 
     return 0;
 }
