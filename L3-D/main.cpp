@@ -92,18 +92,24 @@ int main() {
         }
     };
 
-    // [TODO 1]: Zdefiniuj dwa puste wektory przechowujÄ…ce shared_ptr do Dummy
+    // Define two empty vectors storing shared_ptr to Dummy
+    std::vector<std::shared_ptr<Dummy>> v1;
+    std::vector<std::shared_ptr<Dummy>> v2;
 
-    // v2
     {
-        // [TODO 1]: Zdefiniuj 3 zmienne przechowujÄ…ce shared_ptr do Dummy z identyfikatorami A, B i C
-        // A
-        // B
-        // C
+        // Define 3 variables storing shared_ptr to Dummy with identifiers A, B and C
+        std::shared_ptr<Dummy> A = std::make_shared<Dummy>('A');
+        std::shared_ptr<Dummy> B = std::make_shared<Dummy>('B');
+        std::shared_ptr<Dummy> C = std::make_shared<Dummy>('C');
 
-        // [TODO 1]: Dodaj A, B i C do v1
+        // Add A, B and C to v1
+        v1.push_back(A);
+        v1.push_back(B);
+        v1.push_back(C);
 
-        // [TODO 1]: Dodaj B i C do v2
+        // Add B and C to v2
+        v2.push_back(B);
+        v2.push_back(C);
     }
 
     std::cout << "\nClearing v1" << std::endl;
@@ -114,11 +120,12 @@ int main() {
     v2.clear();
     std::cout << std::endl;
 
-    // [TODO 2]: Zdefiniuj pusty wektor przechowujÄ…cy unique_ptr do Dummy
-    // v3
+    // Define empty vector storing unique_ptr to Dummy
+    std::vector<std::unique_ptr<Dummy>> v3;
 
-    // [TODO 2]: Dodaj do v3 dwa unique_ptr z identyfikatorami D i E
-
+    // Add to v3 two unique_ptr with identifiers D and E
+    v3.push_back(std::make_unique<Dummy>('D'));
+    v3.push_back(std::make_unique<Dummy>('E'));
 
     return 0;
 }
