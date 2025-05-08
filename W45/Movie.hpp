@@ -100,7 +100,14 @@ class Movie {
 
 template <typename RatingType>
 std::ostream& operator<<(std::ostream& os, const Movie<RatingType>& movie) {
-    os << movie.getTitle() << " (" << movie.getYear() << "), Director: ";
+    os << movie.getTitle() << " (" << movie.getYear() << "), ";
+
+    if (std::holds_alternative<typename Movie<RatingType>::Director>(movie.getDirector())) {
+        os << "Director: " << std::get<typename Movie<RatingType>::Director>(movie.getDirector()).name << " (Oscars: " << std::get<typename Movie<RatingType>::Director>(movie.getDirector()).numberOfOscars << ")";
+    } else {
+        os << "Director: " << std::get<std::string>(movie.getDirector());
+    }
+
 
     os << ", Avg: " << std::fixed << std::setprecision(2) << movie.getAverageRating()
        << ", Top: " << movie.getTopRating();
